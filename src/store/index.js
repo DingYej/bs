@@ -4,12 +4,18 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    state: {
+        tagsView: false
+    },
+    mutations: {
+        TOGGLE_SIDEBAR: state => {
+            state.tagsView = !state.tagsView
+        }
+    },
+    actions: {
+        toggleSideBar({ commit }) {
+            commit('TOGGLE_SIDEBAR')
+        },
+    },
+    modules: {}
 })
